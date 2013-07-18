@@ -7,11 +7,13 @@
 		<div class="content">
 			{{ content }}
 		</div>
+
+  {% if page.source.url %}
 	<footer>
-		{% include post/categories.html %}
-	
-	{% if page.source.url %}via <a href="{{ page.source.url }}">{{ page.source.title }}</a>{% endif %}
+		<!-- {% include post/categories.html %} -->
+    via <a href="{{ page.source.url }}">{{ page.source.title }}</a>
 	</footer>
-	
+  {% endif %}
+
 </article>
 <!-- END OF _includes/article.html -->
